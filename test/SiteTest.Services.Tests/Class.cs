@@ -22,5 +22,13 @@ namespace SiteTest.Services.Tests
 
             Assert.True(result.Rut == "16385993-9", $"El rut coincide correctamente");
         }
+
+        [Fact]
+        public void ReturnFalsePersonaPorRut()
+        {
+            var result = _servicioPersona.ObtenerPersonaPor("-19");
+            //Assert.True(result.Rut == "16385993-9", $"El rut coincide correctamente");
+            Assert.Null(result);
+        }
     }
 }
