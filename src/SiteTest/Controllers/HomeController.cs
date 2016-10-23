@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SiteTest.Servicios;
 
 namespace SiteTest.Controllers
 {
@@ -23,7 +24,7 @@ namespace SiteTest.Controllers
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
-
+            ViewData["Personas"] = new ServicePersona().ObtenerPersonas();
             return View();
         }
 
