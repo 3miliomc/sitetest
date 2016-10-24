@@ -1,8 +1,5 @@
 FROM microsoft/aspnetcore
-COPY . /app
 WORKDIR /app
-RUN ["dotnet", "restore"]
-RUN ["dotnet", "build"]
+COPY . .
  
-EXPOSE 5000/tcp
-ENTRYPOINT ["dotnet", "run", "--server.urls", "http://*:5000"]
+ENTRYPOINT ["dotnet", "SiteTest.dll"]
