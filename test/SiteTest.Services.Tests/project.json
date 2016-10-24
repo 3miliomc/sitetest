@@ -22,7 +22,8 @@
       },
       "imports": [
         "dotnet5.4",
-        "portable-net451+win8"
+        "portable-net451+win8",
+        "portable-net452"
       ]
     }
   }
